@@ -1,8 +1,8 @@
-# ---------------------------------------------------------------------------------
+# ----------------------------------------------------------
 
 Zstd decompression
 
-# ---------------------------------------------------------------------------------
+# ----------------------------------------------------------
 
 Python CLI utility for handling zstd compression and tar contents - includes stream and sync decompression techniques, as well as a more verbose sync approach that ensures proper tar file output.
 
@@ -14,11 +14,11 @@ At this time GCC downloads suddenly switched to zstd and Scoop's 7zip version wa
 
 Below are some further notes and commands I wrote for cross-compiling Godot.
 
-# ---------------------------------------------------------------------------------
+# ----------------------------------------------------------
 
 Godot
 
-# ---------------------------------------------------------------------------------
+# ----------------------------------------------------------
 
 use godot-3.2.2-stable to match docs for ECMAScript compilation
 
@@ -30,11 +30,11 @@ Godot 4.0 will require a C++ 17-compatible compiler to be built from source
 run from path/to/godot-[version]-stable to compile
 place SConsctruct file at script root
 
-# ---------------------------------------------------------------------------------
+# ----------------------------------------------------------
 
 SCons
 
-# ---------------------------------------------------------------------------------
+# ----------------------------------------------------------
 
 scons -j6 platform=windows use_mingw=yes use_lto=yes bits=64
 
@@ -51,11 +51,11 @@ pick x86 or x86_64 for Windows:
 bits=32
 bits=64
 
-# ---------------------------------------------------------------------------------
+# ----------------------------------------------------------
 
 Scoop
 
-# ---------------------------------------------------------------------------------
+# ----------------------------------------------------------
 
 custom scoop manifest json file: scoop + custom gcc url + posix threads
 
@@ -66,4 +66,4 @@ custom scoop manifest json file: scoop + custom gcc url + posix threads
 "args": ["--enable-threads=posix"]
 }
 
-# ---------------------------------------------------------------------------------
+# ----------------------------------------------------------
