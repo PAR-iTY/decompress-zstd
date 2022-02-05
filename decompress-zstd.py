@@ -12,7 +12,7 @@ import fire
 #==========================================================================================#
 
 
-def init(in_file="./test/gcc.tar.zst", out_file="./test/gcc.tar", mode="stream"):
+def init(in_file='./test/gcc.tar.zst', out_file='./test/gcc.tar', mode='stream'):
     # CLI args default to test gcc file if unspecified
 
     # define out_file using in_file
@@ -41,7 +41,7 @@ def decompress_zstd_stream(in_file, out_file, decompressor):
     with open(in_file, 'rb') as input, open(out_file, 'wb') as output:
 
         print(
-            f"stream copying {PurePosixPath(in_file).suffix[1:]} data to {PurePosixPath(out_file).suffix[1:]} file..")
+            f'stream copying {PurePosixPath(in_file).suffix[1:]} data to {PurePosixPath(out_file).suffix[1:]} file..')
 
         decompressor.copy_stream(input, output)
 
@@ -59,13 +59,13 @@ def decompress_zstd_sync(in_file, out_file, decompressor):
     with zstd.open(in_file, mode='rb', dctx=decompressor) as input, open(out_file, mode='wb') as output:
 
         print(
-            f"decompressing {PurePosixPath(in_file).suffix[1:]} file into bytes..")
+            f'decompressing {PurePosixPath(in_file).suffix[1:]} file into bytes..')
 
         # read all byte data from zstd decompressor
         data = input.read()
 
         print(
-            f"writing {str(len(data))} bytes to {PurePosixPath(out_file).suffix[1:]} file..")
+            f'writing {str(len(data))} bytes to {PurePosixPath(out_file).suffix[1:]} file..')
 
         # write all decompressed byte data to out file
         output.write(data)
@@ -86,7 +86,7 @@ def decompress_zstd_sync_tar_wrap(in_file, out_file, decompressor):
     with zstd.open(in_file, mode='rb', dctx=decompressor) as input, tarfile.open(name=out_file, mode='w') as output:
 
         print(
-            f"opening {PurePosixPath(in_file).suffix[1:]} file for decompression..")
+            f'opening {PurePosixPath(in_file).suffix[1:]} file for decompression..')
         # read data from decompressor
         data = input.read()
 
@@ -96,16 +96,16 @@ def decompress_zstd_sync_tar_wrap(in_file, out_file, decompressor):
         # this link also suggests learning about gettarinfo() usage
         io_bytes = io.BytesIO(initial_bytes=data)
 
-        # print(f"input byte-stream: {io_bytes}")
+        # print(f'input byte-stream: {io_bytes}')
 
         # create a TarInfo file to tell tarfile how to use the byte-stream
         # out_file is pathlib object, tarfile needs a string for name
-        tar_info = tarfile.TarInfo(name=f"{out_file}")
+        tar_info = tarfile.TarInfo(name=f'{out_file}')
         # [IMPORTANT] it is crucial to give a size to get a correct header
         tar_info.size = len(data)
 
         print(
-            f"writing {str(tar_info.size)} bytes to {PurePosixPath(out_file).suffix[1:]} file..")
+            f'writing {str(tar_info.size)} bytes to {PurePosixPath(out_file).suffix[1:]} file..')
 
         # add tar file metadata and byte-stream objects and write to ouput
         output.addfile(tar_info, fileobj=io_bytes)
