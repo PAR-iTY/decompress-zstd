@@ -4,7 +4,7 @@ Python CLI utility for handling zstd compression and tar contents - includes str
 
 Uses fire library to automatically create and handle CLI args sourced from init function.
 
-## inspiration
+## Inspiration
 
 Originally written when I was experimenting with customising the Godot game engine and with cross-compilation from a windows environment, using approaches like Scoop, SCons, MSYS2, Mingw-w64, LLVM.
 
