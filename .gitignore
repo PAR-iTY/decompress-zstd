@@ -1,3 +1,4 @@
-/.vscode/
-/__pycache__/
-ultra.tar.zst.lnk
+.vscode
+__pycache__
+test/ultra.tar.zst.lnk
+test/*.tar

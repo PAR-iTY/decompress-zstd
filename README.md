@@ -57,8 +57,7 @@ Scoop
 
 # ---------------------------------------------------------------------------------
 
-custom scoop manifest json file:
-// scoop + custom gcc url + posix threads
+custom scoop manifest json file: scoop + custom gcc url + posix threads
 
 {
 "version": "9.3.0",
