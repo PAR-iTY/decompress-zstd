@@ -16,7 +16,7 @@ Below are some further notes and commands I wrote for cross-compiling Godot.
 
 # -----------------------
 
-# Godot
+## Godot
 
 # -----------------------
 
@@ -32,7 +32,7 @@ place SConsctruct file at script root
 
 # -----------------------
 
-# SCons
+## SCons
 
 # -----------------------
 
@@ -53,7 +53,7 @@ bits=64
 
 # -----------------------
 
-# Scoop
+## Scoop
 
 # -----------------------
 
