@@ -31,6 +31,7 @@ def init(in_file='./test/gcc.tar.zst', out_file='./test/gcc.tar', mode='stream')
     # run the specified or default function
     funcs[mode](in_file, out_file, dctx)
 
+
 #==========================================================================================#
 
 # copies decompressed zstd stream to new file in chunks - works on any file size

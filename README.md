@@ -10,4 +10,4 @@ Originally written when I was experimenting with customising the Godot game engi
 
 At this time GCC downloads suddenly switched to zstd and Scoop's 7zip version was not updated to support zstd - so I ended up writing this script both as a solution and to learn more about it.
 
-Some further notes and commands on compiling GCC and Godot are found [here](gcc-godot.md)
+Some further notes and commands on compiling GCC and Godot are found [here](https://github.com/PAR-iTY/cli-notes/blob/main/gcc-godot.md)
